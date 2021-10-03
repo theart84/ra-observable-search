@@ -3,25 +3,29 @@ import {
   SEARCH_SKILLS_REQUEST,
   SEARCH_SKILLS_FAILURE,
   SEARCH_SKILLS_SUCCESS,
-} from './actionTypes';
+  CLEAR_LIST_ITEMS,
+} from "./actionTypes";
 
-
-export const searchSkillsRequest = search => ({
+export const searchSkillsRequest = (search) => ({
   type: SEARCH_SKILLS_REQUEST,
-  payload: {search},
+  payload: { search },
 });
 
-export const searchSkillsFailure = error => ({
+export const searchSkillsFailure = (error) => ({
   type: SEARCH_SKILLS_FAILURE,
-  payload: {error},
+  payload: { error },
 });
 
-export const searchSkillsSuccess = items => ({
+export const searchSkillsSuccess = (items) => ({
   type: SEARCH_SKILLS_SUCCESS,
-  payload: {items},
+  payload: { items },
 });
 
-export const changeSearchField = search => ({
+export const changeSearchField = (search) => ({
   type: CHANGE_SEARCH_FIELD,
-  payload: {search},
+  payload: { search },
+});
+export const clearListItems = () => ({
+  type: CLEAR_LIST_ITEMS,
+  payload: {},
 });
